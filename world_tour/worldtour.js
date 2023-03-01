@@ -26,7 +26,7 @@ loadMyData();
 // show data to UI
 const showAllData = (countries) => {
   const countryContainer = document.getElementById("countries-info");
-  countryContainer.innerHTML = "";
+  countryContainer.innerHTML = "";    // To clear the ui before show the data.
   countries.forEach((country) => {
     // console.log(country);
     const div = document.createElement("div");
