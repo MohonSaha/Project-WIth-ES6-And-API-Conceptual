@@ -5,3 +5,4 @@ to create the api from json data:
 1) Write the code/data in json formet.
 2) push it in github repo
 3) Click raw button
+4) And copy the url and use it as a api link.

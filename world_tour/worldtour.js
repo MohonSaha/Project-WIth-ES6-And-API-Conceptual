@@ -19,7 +19,7 @@ const loadMyData = async () => {
   const res = await fetch("https://restcountries.com/v3.1/all");
   const data = await res.json();
   console.log(data);
-  showAllData(data.slice(0, 5));
+  showAllData(data.slice(0, 6));
 };
 loadMyData();
 
@@ -66,6 +66,37 @@ const showSingleCountry = (id) => {
     .then((res) => res.json())
     .then((data) => showSingleCountryDataModal(data[0]));
 };
+
+// show single country info in modal using dynamic URL and unique id
+// const showSingleCountryDataModal = (value) => {
+//   // let store = '';
+//   // store = Object.keys(value.currencies)[0];
+//   // console.log(value.currencies[store].name);
+//   // let fullCurriency = '';
+//   // fullCurriency = value.currencies[store].name;
+//   const container = document.getElementById("modal-info");
+//   const div = document.createElement("div");
+//   div.classList.add("modal");
+//   div.innerHTML = `
+//   <div class="modal-box relative">
+//   <label
+//     for="my-modal-3"
+//     class="btn btn-sm btn-circle absolute right-2 top-2"
+//     >✕</label
+//   >
+//   <img src="${value.flags.png}" alt="">
+//   <h3 class="text-lg font-bold">
+//     ${value.name.common}
+//   </h3>
+//   <p class="py-4">
+//     Population : ${value.population}
+//   </p>
+// </div>
+//   `;
+//   container.appendChild(div);
+// };
+
+
 
 // show single country info in modal using dynamic URL and unique id
 const showSingleCountryDataModal = (value) => {

@@ -6,7 +6,7 @@ const serachAllData = (id) => {
   document.getElementById("female").classList.add("d-none");
   const inputValue = inputElement.value;
   document.getElementById("spinner").classList.remove("d-none");
-  const serchId = id || inputValue;
+  const serchId = id || inputValue;  // For the first time load it access id from the function self call. And it access input value when we search wnything in the input box. We can not get the value of id when we search anything bcause id will get only when the page is being reloaded.
 
   const URL = `https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p=${serchId}`;
 
@@ -88,4 +88,7 @@ const showSinglePlayer = (data) => {
   container.appendChild(div);
 };
 
+
+
+// Default data load when the page is load ffor the first time.
 serachAllData("messi");
